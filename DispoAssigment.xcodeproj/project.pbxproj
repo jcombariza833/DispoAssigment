@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		2A0950CA2793517B00117527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950C92793517B00117527 /* AppDelegate.swift */; };
 		2A0950CC2793517B00117527 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950CB2793517B00117527 /* SceneDelegate.swift */; };
-		2A0950CE2793517B00117527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950CD2793517B00117527 /* ViewController.swift */; };
-		2A0950D12793517B00117527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0950CF2793517B00117527 /* Main.storyboard */; };
 		2A0950D32793517C00117527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0950D22793517C00117527 /* Assets.xcassets */; };
 		2A0950D62793517C00117527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0950D42793517C00117527 /* LaunchScreen.storyboard */; };
 		2A0950E12793517D00117527 /* DispoAssigmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950E02793517D00117527 /* DispoAssigmentTests.swift */; };
 		2A0950EB2793517D00117527 /* DispoAssigmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950EA2793517D00117527 /* DispoAssigmentUITests.swift */; };
 		2A0950ED2793517D00117527 /* DispoAssigmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950EC2793517D00117527 /* DispoAssigmentUITestsLaunchTests.swift */; };
+		2A0950FA27935DFC00117527 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950F927935DFC00117527 /* MainViewController.swift */; };
+		2A0950FF2793673900117527 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0950FE2793673900117527 /* DetailViewController.swift */; };
+		2A09510127936BDC00117527 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09510027936BDC00117527 /* MainViewModel.swift */; };
+		2A09510327936BEF00117527 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09510227936BEF00117527 /* DetailViewModel.swift */; };
+		2A09510627936E9400117527 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A09510527936E9400117527 /* SnapKit */; };
+		2A0951092793741A00117527 /* GiphyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0951082793741A00117527 /* GiphyService.swift */; };
+		2A09510B2793744C00117527 /* GiphyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09510A2793744C00117527 /* GiphyRepository.swift */; };
+		2A09510D2793773400117527 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09510C2793773400117527 /* Data.swift */; };
+		2A09511027937C3000117527 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09510F27937C3000117527 /* Constants.swift */; };
+		2A0951162793ABA800117527 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0951152793ABA800117527 /* Alamofire */; };
+		2A09511D2794C1E900117527 /* FakeGiphyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09511C2794C1E900117527 /* FakeGiphyRepository.swift */; };
+		2A09511F2794D43700117527 /* GiphyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A09511E2794D43700117527 /* GiphyTableViewCell.swift */; };
+		2A0951212794D4AA00117527 /* GiphyViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0951202794D4AA00117527 /* GiphyViewModelCell.swift */; };
+		2A0951252794F87600117527 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0951242794F87600117527 /* NiblessViewController.swift */; };
+		2A0951272795301000117527 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0951262795301000117527 /* UIImageView+Extension.swift */; };
+		2A09512B2795AA2A00117527 /* GiphyUISDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2A09512A2795AA2A00117527 /* GiphyUISDK */; };
+		2A09512E2796038C00117527 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 2A09512D2796038C00117527 /* Resolver */; };
+		2A095131279604A000117527 /* AppInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A095130279604A000117527 /* AppInjection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +55,6 @@
 		2A0950C62793517B00117527 /* DispoAssigment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DispoAssigment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0950C92793517B00117527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A0950CB2793517B00117527 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A0950CD2793517B00117527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A0950D02793517B00117527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A0950D22793517C00117527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A0950D52793517C00117527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A0950D72793517C00117527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +63,20 @@
 		2A0950E62793517D00117527 /* DispoAssigmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DispoAssigmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0950EA2793517D00117527 /* DispoAssigmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispoAssigmentUITests.swift; sourceTree = "<group>"; };
 		2A0950EC2793517D00117527 /* DispoAssigmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispoAssigmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A0950F927935DFC00117527 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2A0950FE2793673900117527 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2A09510027936BDC00117527 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2A09510227936BEF00117527 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2A0951082793741A00117527 /* GiphyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyService.swift; sourceTree = "<group>"; };
+		2A09510A2793744C00117527 /* GiphyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyRepository.swift; sourceTree = "<group>"; };
+		2A09510C2793773400117527 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2A09510F27937C3000117527 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2A09511C2794C1E900117527 /* FakeGiphyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGiphyRepository.swift; sourceTree = "<group>"; };
+		2A09511E2794D43700117527 /* GiphyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTableViewCell.swift; sourceTree = "<group>"; };
+		2A0951202794D4AA00117527 /* GiphyViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyViewModelCell.swift; sourceTree = "<group>"; };
+		2A0951242794F87600117527 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		2A0951262795301000117527 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		2A095130279604A000117527 /* AppInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInjection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A09512B2795AA2A00117527 /* GiphyUISDK in Frameworks */,
+				2A09510627936E9400117527 /* SnapKit in Frameworks */,
+				2A09512E2796038C00117527 /* Resolver in Frameworks */,
+				2A0951162793ABA800117527 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +131,14 @@
 		2A0950C82793517B00117527 /* DispoAssigment */ = {
 			isa = PBXGroup;
 			children = (
+				2A09512F2796046F00117527 /* DependencyInjection */,
+				2A09510E27937C2300117527 /* Utils */,
+				2A095107279373F800117527 /* Networking */,
+				2A0950FD27935EE300117527 /* Model */,
+				2A0950FC27935ED400117527 /* VIewModel */,
+				2A0950FB27935EC800117527 /* View */,
 				2A0950C92793517B00117527 /* AppDelegate.swift */,
 				2A0950CB2793517B00117527 /* SceneDelegate.swift */,
-				2A0950CD2793517B00117527 /* ViewController.swift */,
-				2A0950CF2793517B00117527 /* Main.storyboard */,
 				2A0950D22793517C00117527 /* Assets.xcassets */,
 				2A0950D42793517C00117527 /* LaunchScreen.storyboard */,
 				2A0950D72793517C00117527 /* Info.plist */,
@@ -127,6 +163,62 @@
 			path = DispoAssigmentUITests;
 			sourceTree = "<group>";
 		};
+		2A0950FB27935EC800117527 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A0950F927935DFC00117527 /* MainViewController.swift */,
+				2A0950FE2793673900117527 /* DetailViewController.swift */,
+				2A09511E2794D43700117527 /* GiphyTableViewCell.swift */,
+				2A0951242794F87600117527 /* NiblessViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A0950FC27935ED400117527 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A09510027936BDC00117527 /* MainViewModel.swift */,
+				2A09510227936BEF00117527 /* DetailViewModel.swift */,
+				2A0951202794D4AA00117527 /* GiphyViewModelCell.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		2A0950FD27935EE300117527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A09510C2793773400117527 /* Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A095107279373F800117527 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2A0951082793741A00117527 /* GiphyService.swift */,
+				2A09510A2793744C00117527 /* GiphyRepository.swift */,
+				2A09511C2794C1E900117527 /* FakeGiphyRepository.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2A09510E27937C2300117527 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A09510F27937C3000117527 /* Constants.swift */,
+				2A0951262795301000117527 /* UIImageView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2A09512F2796046F00117527 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				2A095130279604A000117527 /* AppInjection.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +235,12 @@
 			dependencies = (
 			);
 			name = DispoAssigment;
+			packageProductDependencies = (
+				2A09510527936E9400117527 /* SnapKit */,
+				2A0951152793ABA800117527 /* Alamofire */,
+				2A09512A2795AA2A00117527 /* GiphyUISDK */,
+				2A09512D2796038C00117527 /* Resolver */,
+			);
 			productName = DispoAssigment;
 			productReference = 2A0950C62793517B00117527 /* DispoAssigment.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +313,12 @@
 				Base,
 			);
 			mainGroup = 2A0950BD2793517A00117527;
+			packageReferences = (
+				2A09510427936E9300117527 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2A0951142793ABA800117527 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2A0951292795AA2A00117527 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */,
+				2A09512C2796038B00117527 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 2A0950C72793517B00117527 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +337,6 @@
 			files = (
 				2A0950D62793517C00117527 /* LaunchScreen.storyboard in Resources */,
 				2A0950D32793517C00117527 /* Assets.xcassets in Resources */,
-				2A0950D12793517B00117527 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +361,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A0950CE2793517B00117527 /* ViewController.swift in Sources */,
+				2A09510127936BDC00117527 /* MainViewModel.swift in Sources */,
+				2A09510B2793744C00117527 /* GiphyRepository.swift in Sources */,
+				2A09510327936BEF00117527 /* DetailViewModel.swift in Sources */,
+				2A09511D2794C1E900117527 /* FakeGiphyRepository.swift in Sources */,
+				2A0951092793741A00117527 /* GiphyService.swift in Sources */,
+				2A0950FA27935DFC00117527 /* MainViewController.swift in Sources */,
+				2A0951252794F87600117527 /* NiblessViewController.swift in Sources */,
+				2A0951212794D4AA00117527 /* GiphyViewModelCell.swift in Sources */,
+				2A09511027937C3000117527 /* Constants.swift in Sources */,
+				2A0951272795301000117527 /* UIImageView+Extension.swift in Sources */,
 				2A0950CA2793517B00117527 /* AppDelegate.swift in Sources */,
 				2A0950CC2793517B00117527 /* SceneDelegate.swift in Sources */,
+				2A09510D2793773400117527 /* Data.swift in Sources */,
+				2A09511F2794D43700117527 /* GiphyTableViewCell.swift in Sources */,
+				2A0950FF2793673900117527 /* DetailViewController.swift in Sources */,
+				2A095131279604A000117527 /* AppInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A0950CF2793517B00117527 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A0950D02793517B00117527 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A0950D42793517C00117527 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +552,6 @@
 				INFOPLIST_FILE = DispoAssigment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +579,6 @@
 				INFOPLIST_FILE = DispoAssigment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -604,6 +710,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A09510427936E9300117527 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2A0951142793ABA800117527 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2A0951292795AA2A00117527 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Giphy/giphy-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.3;
+			};
+		};
+		2A09512C2796038B00117527 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A09510527936E9400117527 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A09510427936E9300117527 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2A0951152793ABA800117527 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0951142793ABA800117527 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2A09512A2795AA2A00117527 /* GiphyUISDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0951292795AA2A00117527 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */;
+			productName = GiphyUISDK;
+		};
+		2A09512D2796038C00117527 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A09512C2796038B00117527 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A0950BE2793517A00117527 /* Project object */;
 }
