@@ -1,8 +1,8 @@
 //
-//  GiphyRepository.swift
+//  GiphiAPIRepository.swift
 //  DispoAssigment
 //
-//  Created by JUAN PABLO COMBARIZA MEJIA on 1/15/22.
+//  Created by JUAN PABLO COMBARIZA MEJIA on 1/28/22.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import Alamofire
 import GiphyUISDK
 import ComposableArchitecture
 
-struct GiphyRepository: GiphyService {
+struct GiphyAPIRepository: GiphyAPIService {
    
     enum UrlType {
         case trending
@@ -43,64 +43,53 @@ struct GiphyRepository: GiphyService {
         }
     }
     
-    func fetchTrendingGifs() -> Effect<GroupResponse,AFError> {
+    func fetchTrendingGifs() -> Effect<GroupResponse,NetworkError> {
         let url = UrlType.trending.getUrl()
         
-        return Future <GroupResponse, AFError> { promise in
+        return Future <GroupResponse, NetworkError> { promise in
             AF.request(url, method: .get)
                 .validate()
                 .responseDecodable(of: GroupResponse.self) { response in
                     switch response.result {
                     case .success(let gifs):
                         promise(.success(gifs))
-                    case .failure(let error):
-                        promise(.failure(error))
+                    case .failure( _ ):
+                        promise(.failure(.unableToRequest))
                     }
                 }
         }.eraseToEffect()
     }
     
-    func fetchGifs(by searchText: String) -> Effect<GroupResponse,AFError> {
+    func fetchGifs(by searchText: String) -> Effect<GroupResponse,NetworkError> {
         let url = UrlType.search(searchTerm: searchText).getUrl()
-        return Future <GroupResponse, AFError> { promise in
+        return Future <GroupResponse, NetworkError> { promise in
             AF.request(url, method: .get)
                 .validate()
                 .responseDecodable(of: GroupResponse.self) { response in
                     switch response.result {
                     case .success(let gifs):
                         promise(.success(gifs))
-                    case .failure(let error):
-                        promise(.failure(error))
+                    case .failure( _ ):
+                        promise(.failure(.unableToRequest))
                     }
                 }
         }.eraseToEffect()
     }
     
-    func getGifInfo(by id: String) -> Effect<Response,AFError> {
+    func getGifDetail(by id: String) -> Effect<Response,NetworkError> {
         let url = UrlType.gif(id: id).getUrl()
-        return Future <Response, AFError> { promise in
+        return Future <Response, NetworkError> { promise in
             AF.request(url, method: .get)
                 .validate()
                 .responseDecodable(of: Response.self) { response in
                     switch response.result {
                     case .success(let gif):
                         promise(.success(gif))
-                    case .failure(let error):
-                        promise(.failure(error))
+                    case .failure( _ ):
+                        promise(.failure(.unableToRequest))
                     }
                 }
         }.eraseToEffect()
     }
-    
-    func getGif(by id: String) -> Effect<GPHMedia, GiphySDKError> {
-        return Future <GPHMedia, GiphySDKError> { promise in
-            GiphyCore.shared.gifByID(id) { response, error in
-                guard let media = response?.data else {
-                    promise(.failure(GiphySDKError.errorFetchingMedia))
-                    return
-                }
-                promise(.success(media))
-            }
-        }.eraseToEffect()
-    }
 }
+

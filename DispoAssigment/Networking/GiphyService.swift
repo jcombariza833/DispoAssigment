@@ -9,13 +9,11 @@ import Foundation
 import Combine
 import Alamofire
 import GiphyUISDK
+import ComposableArchitecture
 
-enum GiphySDKError: Error {
-    case errorFetchingMedia
-}
 protocol GiphyService {
-    func fetchTrendingGifs() -> AnyPublisher<GroupResponse,AFError>
-    func fetchGifs(by searchText: String) -> AnyPublisher<GroupResponse,AFError>
-    func getGifInfo(by id: String) -> AnyPublisher<Response,AFError>
-    func getGif(by id: String) -> AnyPublisher<GPHMedia,GiphySDKError>
+    func fetchTrendingGifs() -> Effect<GroupResponse,AFError>
+    func fetchGifs(by searchText: String) -> Effect<GroupResponse,AFError>
+    func getGifInfo(by id: String) -> Effect<Response,AFError>
+    func getGif(by id: String) -> Effect<GPHMedia,GiphySDKError>
 }

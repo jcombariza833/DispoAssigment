@@ -7,16 +7,17 @@
 
 import Foundation
 import SwiftUI
+import GiphyUISDK
 
-struct GroupResponse: Codable {
+struct GroupResponse: Codable, Equatable {
     var data: [GIF]
 }
 
-struct Response: Codable {
+struct Response: Codable, Equatable {
     var data: GIF
 }
 
-struct GIF {
+struct GIF: Equatable, Identifiable {
     var id: String
     var title: String
     var source: String
@@ -29,6 +30,7 @@ struct GIF {
         case source = "source_tld"
         case rating
         case images
+        case media
     }
     
     enum ImagesCodingKeys: String, CodingKey {

@@ -21,8 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let viewController: MainViewController = Resolver.resolve()
-        let navigationView = UINavigationController(rootViewController: viewController)
+      let viewController = AppViewController(
+        store:
+            .init(initialState: AppState(),
+                  reducer: appReducer,
+                  environment: .live())
+      )
+
+        let navigationView = viewController
         window?.rootViewController = navigationView
         window?.makeKeyAndVisible()
     }
@@ -46,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
 
     }
-
-
+// snowflag
+// jengas framework
 }
 

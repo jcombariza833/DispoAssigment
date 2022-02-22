@@ -9,10 +9,12 @@ import Foundation
 import Combine
 import Alamofire
 import GiphyUISDK
+import ComposableArchitecture
 
 class FakeGiphyRepository: GiphyService {
+    
     var isFailing = true
-    func fetchTrendingGifs() -> AnyPublisher<GroupResponse, AFError> {
+    func fetchTrendingGifs() -> Effect<GroupResponse, AFError> {
         return Future<GroupResponse, AFError> { promise in
           DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
               if self.isFailing {
@@ -21,10 +23,10 @@ class FakeGiphyRepository: GiphyService {
                   promise(.success(GroupResponse.mockData))
               }
           }
-        }.eraseToAnyPublisher()
+        }.eraseToEffect()
     }
     
-    func fetchGifs(by searchText: String) -> AnyPublisher<GroupResponse, AFError> {
+    func fetchGifs(by searchText: String) -> Effect<GroupResponse, AFError> {
         return Future<GroupResponse, AFError> { promise in
           DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
               if self.isFailing {
@@ -33,10 +35,10 @@ class FakeGiphyRepository: GiphyService {
                   promise(.success(GroupResponse.mockData))
               }
           }
-        }.eraseToAnyPublisher()
+        }.eraseToEffect()
     }
     
-    func getGifInfo(by id: String) -> AnyPublisher<Response, AFError> {
+    func getGifInfo(by id: String) -> Effect<Response, AFError> {
         return Future<Response, AFError> { promise in
           DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
               if self.isFailing {
@@ -45,10 +47,10 @@ class FakeGiphyRepository: GiphyService {
                   promise(.success(Response.mockData))
               }
           }
-        }.eraseToAnyPublisher()
+        }.eraseToEffect()
     }
     
-    func getGif(by id: String) -> AnyPublisher<GPHMedia, GiphySDKError> {
+    func getGif(by id: String) -> Effect<GPHMedia, GiphySDKError> {
         return Future <GPHMedia, GiphySDKError> { promise in
             GiphyCore.shared.gifByID(id) { response, error in
                 if self.isFailing {
@@ -57,7 +59,7 @@ class FakeGiphyRepository: GiphyService {
                     promise(.success(GPHMedia("fake id", type: .gif, url: "fake url")))
                 }
             }
-        }.eraseToAnyPublisher()
+        }.eraseToEffect()
     }
     
 }
