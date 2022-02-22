@@ -167,9 +167,7 @@
 		2A0950C82793517B00117527 /* DispoAssigment */ = {
 			isa = PBXGroup;
 			children = (
-				2A09514C279F8BE300117527 /* DetailGif */,
-				2A095149279F899000117527 /* Gifs */,
-				2A095146279E75B700117527 /* App */,
+				2AD8A7BD27C49DD7008B6426 /* Features */,
 				2A09510E27937C2300117527 /* Utils */,
 				2A095107279373F800117527 /* Networking */,
 				2A0950FD27935EE300117527 /* Model */,
@@ -327,6 +325,16 @@
 				2AA6C44D27AE016F00027095 /* ViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2AD8A7BD27C49DD7008B6426 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2A095146279E75B700117527 /* App */,
+				2A095149279F899000117527 /* Gifs */,
+				2A09514C279F8BE300117527 /* DetailGif */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
